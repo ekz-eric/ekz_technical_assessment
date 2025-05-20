@@ -120,7 +120,7 @@ Our store is expanding its catalog. We want a **pipeline** that:
 **You will build a mini-product pricing pipeline with these components:**
 
 1. **API Consumer**
-    * Fetch product data using the local API, located in the `api/` directory.
+    * Fetch product data for each vendor using the local API, located in the `api/` directory.
     * For setup instructions and endpoint details, refer to the `README.md` file inside that directory.
 2. **Build & Design a Database**
     * Design and create a database schema optimized for storing vendor product data.
@@ -153,7 +153,7 @@ The following points are provided as **examples**. You are expected to determine
 ```
 technical_assessment/
 ├── api/
-│   └── main.py  # Local API for the technical assessment
+│   └── __main__.py
 │   └── README.md  # Setup & information about the API
 └── INSTRUCTIONS.md
 ```

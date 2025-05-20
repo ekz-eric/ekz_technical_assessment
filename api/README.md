@@ -10,7 +10,7 @@ This guide outlines how to set up and run the API locally for the technical asse
 ## Setup
 1. **Clone the repository**
     ```bash
-    git clone https://sample.git
+    git clone git@github.com:ekz-eric/ekz_technical_assessment.git
     cd ekz_technical_assessment
     ````
 2. **Create a venv**

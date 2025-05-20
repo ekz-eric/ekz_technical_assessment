@@ -23,7 +23,8 @@ coverage.xml
 cover/
 
 # Environments
-.env
+!sample.env
+*.env
 .venv
 env/
 venv/
