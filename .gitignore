@@ -24,7 +24,7 @@ cover/
 
 # Environments
 !sample.env
-*.env
+.env
 .venv
 env/
 venv/
