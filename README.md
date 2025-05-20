@@ -7,13 +7,15 @@
 * Assess your experience in consuming and integrating **external APIs** into a data pipeline.
 * Test your ability to transform raw product data using business logic and store it in a structured and queryable format.
 ---
+
 ## Submission Guidelines
+1. **Fork** this repository to your own GitHub account.
+2. Create a new **feature branch** off `main` in your fork. Use a descriptive name, e.g., `feature/solution-yourname`.
+3. Implement your solution and **commit** your changes to your branch.
+4. **Push** your branch to your forked repository.
+5. Open a **Pull Request (PR)** from your feature branch to the `main` branch of this original repository.
+6. **Do not merge** the PR yourself. We will review your submission and provide feedback directly on your PR.
 ---
-1. Fork the repository.
-2. Create a new branch from `main`, e.g., `feature/solution-yourname`.
-3. Push your changes to your forked repo.
-4. Open a pull request (PR) to the `main` branch of this repository.
-5. Do **not** merge the PR — we will review it from your branch.
 
 # Product Repricing Pipeline
 ## Problem
