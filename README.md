@@ -54,6 +54,8 @@ Our store is expanding its catalog. We want a **pipeline** that:
      * Otherwise, use the **default category rules** when the product's category applies.
      * If neither applies, use the **default vendor rules**.
    * If the shipping tier is **Null**, use the **brand rules** regardless of the rule condition.
+5. **Shipping Tier Rule**:
+   * Use the defined shipping cost unless the shipping tier is null, in which case assume $0.
 
 ### Default Vendor Rules
 | Vendor               | Extra Cost | Target Margin |

@@ -16,15 +16,15 @@ setup_logging()
 @asynccontextmanager
 async def lifespan(application: FastAPI):
     logger = logging.getLogger("api.lifespan")
-    application.state.vendors = load_data("./data/vendor_id_data.json")  # type: ignore
+    application.state.vendors = load_data("./api/data/vendor_id_data.json")  # type: ignore
 
     # Grouped data
     application.state.shipping_tiers_by_vendor = load_grouped_data(  # type: ignore
-        "./data/vendor_shipping_data.json"
+        "./api/data/vendor_shipping_data.json"
     )
-    application.state.products_by_vendor = load_grouped_data("./data/final_sample_data.json")  # type: ignore
-    application.state.categories_by_vendor = load_grouped_data("./data/vendor_category_data.json")  # type: ignore
-    application.state.brands_by_vendor = load_grouped_data("./data/vendor_brand_data.json")  # type: ignore
+    application.state.products_by_vendor = load_grouped_data("./api/data/final_sample_data.json")  # type: ignore
+    application.state.categories_by_vendor = load_grouped_data("./api/data/vendor_category_data.json")  # type: ignore
+    application.state.brands_by_vendor = load_grouped_data("./api/data/vendor_brand_data.json")  # type: ignore
 
     # Debug print examples
     evergreen_tier = json.dumps(application.state.shipping_tiers_by_vendor.get(1), indent=4)  # type: ignore
