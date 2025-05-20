@@ -6,8 +6,6 @@
 * Evaluate your ability to design and interact with a **relational database** using **SQL**, including schema design and query optimization.
 * Assess your experience in consuming and integrating **external APIs** into a data pipeline.
 * Test your ability to transform raw product data using business logic and store it in a structured and queryable format.
----
-
 ## Submission Guidelines
 1. **Fork** this repository to your own GitHub account.
 2. Create a new **feature branch** off `main` in your fork. Use a descriptive name, e.g., `feature/solution-yourname`.
@@ -15,6 +13,16 @@
 4. **Push** your branch to your forked repository.
 5. Open a **Pull Request (PR)** from your feature branch to the `main` branch of this original repository.
 6. **Do not merge** the PR yourself. We will review your submission and provide feedback directly on your PR.
+## Folder Structure
+```
+ekz_technical_assessment/
+├── api/
+│   ├── __main__.py
+│   └── README.md  # Setup & information about the provided local API
+├── your_pipeline/
+│   └── ...        # Your solution goes here. Build and deploy your pipeline here.
+├── README.md      # Technical assessment instructions and guidelines
+```
 ---
 
 # Product Repricing Pipeline
@@ -25,7 +33,6 @@ Our store is expanding its catalog. We want a **pipeline** that:
 * Applies repricing based on **business logic**.
 * Stores and updates product data in a **SQL database** (SQLite).
 * Runs as a scheduled **Prefect flow**.
----
 
 ## Business Logic
 1. **Default Target Profit Margin**
@@ -100,7 +107,6 @@ Our store is expanding its catalog. We want a **pipeline** that:
 
 *Note: If the shipping tier is Null, brand rules overrides vendor and category rules.*
 
-
 ### Target Margin Rules Hierarchy
 1. **Brand Target Margin Rules**  
    - Applies **only when `shipping_tier_cost` is Null**.  
@@ -114,7 +120,6 @@ Our store is expanding its catalog. We want a **pipeline** that:
 4. **Default Vendor Rules** *(Fallback)*  
    - Applies only when the product's category is **not listed** in any margin rules.  
    - Use the **vendor's default rules and extra cost**.
----
 
 ## Task Breakdown
 **You will build a mini-product pricing pipeline with these components:**
@@ -131,7 +136,6 @@ Our store is expanding its catalog. We want a **pipeline** that:
       * Extract (API) -> Transform (Pricing logic) -> Load (DB)
 5. **Exposed API (Optional/Bonus)**
     * Create a simple FastAPI service that allows querying repriced products with filters for brand, category, or vendor.
----
 
 ## Testing
 Writing **unit tests** using `pytest` is a **mandatory** part of this technical assessment. Testing will be graded as part of your submission based on **coverage, quality, and clarity**.
@@ -147,13 +151,3 @@ The following points are provided as **examples**. You are expected to determine
 * (Optional) **API endpoint tests**, if you implement the FastAPI bonus task:
   * Filtering by brand/category/vendor
   * Response structure and status codes
----
-
-### Folder Structure
-```
-technical_assessment/
-├── api/
-│   └── __main__.py
-│   └── README.md  # Setup & information about the API
-└── INSTRUCTIONS.md
-```
